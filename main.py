@@ -103,6 +103,15 @@ def statistics (list) -> (dict): # počítá délku jednotlivých slov a jejich 
 
 sum_texts = len(TEXTS) # vrací počet textů v knihovně
 
+#začátek hlavičky
+print("""
+projekt_1.py: první projekt do Engeto Online Python Akademie
+
+author: Jakub Šmíd
+email: smidjakub13@gmail.com    
+""")
+#konec hlavičky
+
 user = input("Zadejte uživatelské jméno: ")
 password = input("Zadejte heslo: ")
 
