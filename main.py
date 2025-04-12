@@ -121,13 +121,13 @@ print(f"""username:{user}\npassword:{password}\n{exist(status)}""")
 
 while True:         # Ošetřený vstupu výběru textu
     try:
-        choosed_text = int(input("Enter a number btw. 1 and 3 to select: "))
-        if 0 < choosed_text < 4:
+        choosed_text = int(input(f"Enter a number btw. 1 and {sum_texts} to select: "))
+        if 0 < choosed_text < (sum_texts+1):
             break 
         else:
-            print("Maybe I misunderstood you. Enter a number btw. 1 and 3 to select: ") 
+            print(f"Maybe I misunderstood you. Enter a number btw. 1 and {sum_texts} to select: ") 
     except ValueError:
-        print("Invalid input. Please enter a number between 1 and 3.")
+        print(F"Invalid input. Please enter a number between 1 and {sum_texts}.")
 
 words = preparing(TEXTS[choosed_text-1]) # základní kámen pro další operace
 sorted_stats = statistics(words)    # volá funkci pro statistiku zastoupení délky jednotlivých slov
