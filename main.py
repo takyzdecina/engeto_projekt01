@@ -1,5 +1,3 @@
-from typing import NamedTuple,Dict,List
-
 TEXTS = [
 	'''Situated about 10 miles west of Kemmerer,
 	Fossil Butte is a ruggedly impressive
@@ -49,6 +47,8 @@ def preparing(text:str) -> list: # vymaže interpunkci a rozseká text na jednot
 			 .replace("  ", " "))   # maže dvě mezery
 	cutting = stripped.split()  # rozděluje text na jednotlivá slova
 	return(cutting)
+
+from typing import NamedTuple,Dict,List # importuje potřebné knihovny pro práci s daty
 
 class letters_stat(NamedTuple): # vytvoří NamedTuple pro statistiku
 	words_sum: int
