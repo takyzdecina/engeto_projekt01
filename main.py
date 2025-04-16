@@ -34,9 +34,7 @@ users = dict(
      "liz": "pass123"}) #uživatelské jména a hesla
 
 def identifikace(user:str,password:str) -> bool: # porovnává jméno a heslo s knihovnou 
-    if users.get(user) == password:
-        return True
-    else: return False
+	return users.get(user) == password
 
 def exist(status:bool) ->str: # vrací text podle úspěšnosti identifikace
     if status:
