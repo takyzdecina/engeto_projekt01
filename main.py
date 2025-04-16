@@ -123,9 +123,9 @@ while True:		 # Ošetřený vstupu výběru textu
 		if 0 < choosed_text < (sum_texts+1):
 			break 
 		else:
-			print(f"Maybe I misunderstood you. Enter a number btw. 1 and {sum_texts} to select: ") 
+			print(f"Maybe I misunderstood you.", end = " ") 
 	except ValueError:
-		print(F"Invalid input. Please enter a number between 1 and {sum_texts}.")
+		print(F"Maybe I misunderstood you.", end = " ")
 
 all_words = preparing(TEXTS[choosed_text-1]) # list s jednotlivými slovy textu - základní kámen pro další operace
 counting_output = all_counting(all_words) # volá funkci pro spočítání zastoupení jednotlivých slov
